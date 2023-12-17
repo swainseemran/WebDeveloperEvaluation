@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="D:\C Drive data\Desktop\Flipkart\JavaScript\FontAwesome\css"> -->
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+        <nav class="my-2 my-md-0 r-md-3">
+            <a href="#" class="p-2 text-dark">Features</a>
+            <a href="#" class="p-2 text-dark">Enterprise</a>
+            <a href="#" class="p-2 text-dark">Support</a>
+            <a href="#" class="p-2 text-dark">Pricing</a>
+        </nav>
+        <a href="btn btn-outline-primary" href="#">Sign up</a>
+    </div>
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Pricing</h1>
+        <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi similique minima quidem distinctio! Libero odit obcaecati ratione quae. Deserunt id itaque eos est quos veniam quas aut deleniti dolorum quisquam.</p>
+    </div>
+
+    
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        Free
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title">$0 <small class="text-muted">/ mo</small></h1>
+                        <p class="card-text">10 users included <br>
+                            2 GB of storage <br>
+                            Email support <br>
+                            Help center access</p>
+                        <a href="#" class="btn btn-primary">Sign up for free</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header" >
+                        Pro
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title">$15 <small class="text-muted">/ mo</small></h1>
+                        <p class="card-text">20 users included <br>
+                            10 GB of storage <br>
+                            Priority email support <br>
+                            Help center access</p>
+                        <a href="#" class="btn btn-primary">Get started</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        Enterprise
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title">$29 <small class="text-muted">/ mo</small></h1>
+                        <p class="card-text">30 users included <br>
+                            15 GB of storage <br>
+                            Phone and email support <br>
+                            Help center access</p>
+                        <a href="#" class="btn btn-primary">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Posts</h1>
+    <ul id="postList"></ul>
+    <div id="loadingIndicator" class="loading "></div>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-12 col-md">
+                <img src="../bootstrap.svg" alt="" width="25" height="25">
+                <small class="d-block mb-3 text-muted">c 2017-2018</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="#" class="text-muted">Cool stuff</a></li>
+                    <li><a href="#" class="text-muted">Random feature</a></li>
+                    <li><a href="#" class="text-muted">Team feature</a></li>
+                    <li><a href="#" class="text-muted">Stuff for developers</a></li>
+                    <li><a href="#" class="text-muted">Another one</a></li>
+                    <li><a href="#" class="text-muted">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="#" class="text-muted">Resource</a></li>
+                    <li><a href="#" class="text-muted">Resource name</a></li>
+                    <li><a href="#" class="text-muted">Another resource</a></li>
+                    <li><a href="#" class="text-muted">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="#" class="text-muted">Team</a></li>
+                    <li><a href="#" class="text-muted">Locations</a></li>
+                    <li><a href="#" class="text-muted">Privacy</a></li>
+                    <li><a href="#" class="text-muted">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="model fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="o">
+        <div class="model-dialog" role="document">
+            <div class="model-content">
+                <div class="model-header">
+                    <h5 class="model-title" id="orderModalLabel"></h5>
+                    <button type="button" class="colse">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="model-body">
+                    <form action="https://forms.maakeetoo.com" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input name="Email" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="orderComments">Order Commants</label>
+                            <input type="text" class="form-control" rows="4"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
