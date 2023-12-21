@@ -1,0 +1,87 @@
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+.lazy-load-list-container{
+  display: grid;
+  gird-templlate-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap:20px;
+  padding: 20px;
+}
+
+.lazy-load-item{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.image-container{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-placeholder{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+
+.lazy-load-item img{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.item-details{
+  padding:10px;
+}
+
+.loading-indicator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.loading-indicator img{
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .lazy-load-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .lazy-load-item img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .lazy-load-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .lazy-load-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .lazy-load-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
